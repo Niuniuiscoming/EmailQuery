@@ -124,10 +124,20 @@ public class ImportDataController {
         }
     }
 
+    private void setupIndex() {
+        LOGGER.info("开始创建索引");
+        DB db = mongo.getDB(databaseName);
+        db.getCollectionNames().stream().
+                filter(collectionMark -> collectionMark.indexOf("system.") == -1).
+                forEach(collectionMark -> db.getCollection(collectionMark).createIndex("n"));
+        LOGGER.info("索引创建完毕");
+    }
+
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
     public String startPoint() {
         importFromDir(new File(importPath));
+        setupIndex();
         return "导入完成";
     }
 }
