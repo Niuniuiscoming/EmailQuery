@@ -1,0 +1,13 @@
+<html>
+<body>
+<label>用户姓名，可支持*通配符：<input type="text" id="keyword"></label>
+<br/>
+<input type="button" value="开始查询" onclick="query()">
+</body>
+<script type="application/javascript">
+    function query() {
+        var kw = document.getElementById("keyword").value;
+        location.href = "/query/" + kw;
+    }
+</script>
+</html>
