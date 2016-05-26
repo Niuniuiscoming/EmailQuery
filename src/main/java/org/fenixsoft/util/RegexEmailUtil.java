@@ -1,4 +1,4 @@
-package org.fenixsoft;
+package org.fenixsoft.util;
 
 import java.io.BufferedReader;
 import java.io.File;

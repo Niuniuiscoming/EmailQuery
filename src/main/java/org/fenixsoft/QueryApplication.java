@@ -7,12 +7,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class QueryApplication {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(DemoApplication.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(QueryApplication.class);
 
     public static void main(String[] args) {
-        SpringApplication springApplication = new SpringApplication(DemoApplication.class);
+        SpringApplication springApplication = new SpringApplication(QueryApplication.class);
         springApplication.addListeners(new ApplicationStartListener());
         springApplication.run(args);
     }
