@@ -41,7 +41,7 @@ public class ImportDataController {
     private int informationCount;
 
     private static String getEmail(String line) {
-        Pattern pattern = Pattern.compile("([a-z0-9._%+-]+)@[a-z0-9.-]+\\.[a-z]{2,4}");
+        Pattern pattern = Pattern.compile("([a-z0-9]+[a-z0-9._%+-]*)@[a-z0-9.-]+\\.[a-z]{2,4}");
         Matcher matcher = pattern.matcher(line.toLowerCase());
         if (matcher.find()) {
             return matcher.group(1);

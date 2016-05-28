@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MongoConfiguration">
+    <option name="serverConfigurations">
+      <list>
+        <ServerConfiguration>
+          <option name="authenticationMecanism" value="MONGODB-CR" />
+          <option name="label" value="docker_mongodb" />
+          <option name="password" value="efflying" />
+          <option name="serverUrls">
+            <list>
+              <option value="192.168.31.125:27017" />
+            </list>
+          </option>
+          <option name="userDatabase" value="emailquery" />
+          <option name="username" value="admin" />
+        </ServerConfiguration>
+      </list>
+    </option>
+  </component>
+</project>
